@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --branco-principal: #F6F6F6; 
+    --azul-principal: #22D4FD; 
+    --cor-de-fundo: #000000;
+    --animacao-botao: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+}
+
+.apresentacao-conteudo-pai{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao-conteudo-pai__filha{
+    width: 65%; /*610px;*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao-conteudo-pai__filha__titulo{
+    font-size: 1.87rem;
+    font-family: var(--fonte-primaria);
+    text-align: center;
+}
+
+.destaque-titulo{
+    color: var(--azul-principal);
+}
+
+.apresentacao-conteudo-pai__filha__texto{
+    font-size: 1.20rem;
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.apresentacao__botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__botoes__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.apresentacao__botoes__css{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 2px solid var(--azul-principal);
+    width: 40%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__imagem{
+    width: 35%;
+}
+
+.apresentacao__botoes__css:hover{
+    background-color: var(--animacao-botao);
+}
+
+.rodape {
+    padding: 22px;
+    color: var(--azul-principal);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {
+    .apresentacao-conteudo-pai{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao-conteudo-pai__filha{
+        width: auto;
+    }
+
+    .apresentacao__botoes__css{
+        width: 50%;
+    
+    }
+}
